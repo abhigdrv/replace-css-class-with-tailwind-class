@@ -5,11 +5,10 @@
   </head>
 </head>
 <body>
-
 {{!-- Navigation links --}}
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Inline CSS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -17,12 +16,6 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/login">Login</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/register">Register</a>
                 </li>
             </ul>
             </div>
@@ -34,10 +27,30 @@
     {{!-- Body --}}
     <div class="container mt-4">
         <div class="mt-4 p-5 bg-light text-dark rounded">
-            <h1>My Login Project</h1>
-            <p>This project demonstrates how to implement login and register functionalities with Node.js and MySQL </p>
+            <form method="POST" action="/inline-css">
+                <textarea name="data" id="" style="width:100%" rows="10"></textarea> <br>
+                <input type="submit" />
+            </form>
+        </div>
+        <div>
+            <div class="mt-4 p-5 bg-light text-dark rounded">
+                <div class="row">
+                    <div class="col-6">
+                        {{#if finalHtml }}
+                            {{finalHtml}}
+                        {{/if}}
+                    </div>
+                    <div class="col-6" id="myhashstyle">
+                        {{#if styles }}
+                            {{styles}}
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <iframe src="http://localhost:8000" style="height:80vh" width="100%" title="Iframe Example"></iframe>
         </div>
     </div>
-
 </body>
 </html>
