@@ -1,0 +1,11 @@
+<div class="row pt-32"> <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
+    <div class="row mt-6">
+        <div class="bg-white h-24 -mt-10 w-5"> </div>
+        <div class="col-1 ml-6 Unable to Convert: min-width: 140px;"> Advisor </div>
+        <div class="col-5 Unable to Convert: margin-left: -3em;"> <select name="docType" id="doc-type"
+                class="c-lists m-0 Unable to Convert: width: 35%;" placeholder="asd" [(ngmodel)]="selectedAdvisor"
+                (change)="changeAdvisor()">
+                <option *ngfor="let item of advisorList" [ngvalue]="item">{{item.name}} </option>
+            </select> </div>
+    </div>
+</div>
